@@ -1,5 +1,5 @@
-export async function getPosts() {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=25&_start=5&_expand=user')
+export async function getPosts(params = '') {
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts' + params)
     const posts = await res.json()
 
     return posts
