@@ -2,7 +2,7 @@ import { getPosts } from "./getData.js"
 
 export default async function postsList (){
 
-    const posts = await getPosts()
+    const posts = await getPosts('&_embed=comments')
 
     const postsWrapper = document.createElement('div')
     postsWrapper.classList.add('posts-wrapper')
